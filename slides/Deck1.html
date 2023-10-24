@@ -1,0 +1,1314 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Wazuh training for security engineers &mdash; Wazuh for Security Engineers  documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css">
+    <link rel="stylesheet" href="_static/styles.css" type="text/css">
+    <link rel="stylesheet" href="_static/slides.css" type="text/css">
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css">
+    
+    <link rel="stylesheet" href="_static/css/style.css" type="text/css">
+    
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="genindex.html">
+    <link rel="search" title="Search" href="search.html">
+    <link rel="top" title="Wazuh for Security Engineers  documentation" href="index.html">
+    <link rel="next" title="Wazuh training for security engineers" href="Deck2.html">
+    <link rel="prev" title="Wazuh training for security engineers" href="index.html"> 
+  </head>
+  <body>
+
+<section id="slide_container" class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="wazuh-training-for-security-engineers">
+
+<h1>Wazuh training for security engineers</h1>
+
+
+
+
+<div class="slide-no">1</div>
+
+
+</article>
+<article class="slide level-1" id="introduction">
+
+<h1>Introduction</h1>
+
+
+
+
+<div class="slide-no">2</div>
+
+
+</article>
+<article class="slide level-2" id="wazuh">
+
+<h2>wazuh</h2>
+
+<ul class="simple">
+<li>Built on the OSSEC project (GPLv2 fork)<ul>
+<li><a class="reference external" href="https://mobile.twitter.com/danielcid/status/897958679378395136">Publicly recommended by original author of OSSEC</a></li>
+</ul>
+</li>
+<li>Over 8 years of aggressive development</li>
+<li>Massive expansions to legacy OSSEC functionality</li>
+<li>Integration with other major tools and service</li>
+<li>Constant improvement and support</li>
+</ul>
+<div class="line-block">
+<div class="line"><br></div>
+</div>
+<a class="reference internal image-reference" href="_images/Wazuhlogo.png"><img alt="_images/Wazuhlogo.png" class="align-center" src="_images/Wazuhlogo.png" style="width: 80%;"></a>
+
+
+
+<div class="slide-no">3</div>
+
+
+</article>
+<article class="slide level-2" id="what-is-wazuh">
+
+<h2>What is Wazuh?</h2>
+
+<blockquote>
+<div><ul class="simple">
+<li>A situational awareness tool for your electronic assets</li>
+<li>An important resource for achieving regulatory security compliance</li>
+</ul>
+</div></blockquote>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Main Components</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>Log Collection</li>
+<li>Log Analysis (customizable set of over 4000 HIDS rules)</li>
+<li>File Integrity Monitoring</li>
+<li>Host-based anomaly detection</li>
+<li>Security compliance scanning for known vulnerabilities</li>
+<li>Real time alerting (e-mail, SMS, Slack, etc)</li>
+<li>Active Response (a HIDS-driven IPS implementation)</li>
+</ul>
+</div></blockquote>
+</div>
+
+
+
+<div class="slide-no">4</div>
+
+
+</article>
+<article class="slide level-2" id="agents-available-for-many-diverse-platforms">
+
+<h2>Agents available for many diverse platforms</h2>
+
+<ul class="simple">
+<li>Linux (Debian, CentOS, RedHat, SUSE, Amazon Linux, etc)</li>
+<li>BSD (FreeBSD, OpenBSD, NetBSD)</li>
+<li>Solaris (10 &amp; 11)</li>
+<li>AIX (5.3 or greater)</li>
+<li>MacOS</li>
+<li>Windows</li>
+<li>HP-UX (11v3)</li>
+<li>Note: For downloading and installing the latest Wazuh and related packages:  <a class="reference external" href="https://wazuh.com/start/">https://wazuh.com/start/</a></li>
+</ul>
+
+
+
+<div class="slide-no">5</div>
+
+
+</article>
+<article class="slide level-1" id="wazuh-architecture">
+
+<h1>Wazuh Architecture</h1>
+
+
+
+
+<div class="slide-no">6</div>
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>Wazuh Architecture</h2>
+
+<a class="custom-width reference internal image-reference" href="_images/wazuh_architecture.png"><img alt="_images/wazuh_architecture.png" class="custom-width align-center" src="_images/wazuh_architecture.png" style="width: 900px;"></a>
+
+
+
+<div class="slide-no">7</div>
+
+
+</article>
+<article class="slide level-2" id="main-components">
+
+<h2>Main Components</h2>
+
+<a class="custom-width reference internal image-reference" href="_images/main_components.svg"><img alt="_images/main_components.svg" class="custom-width align-center" src="_images/main_components.svg" width="900px"></a>
+
+
+
+<div class="slide-no">8</div>
+
+
+</article>
+<article class="slide level-2" id="wazuh-processes">
+
+<h2>Wazuh Processes</h2>
+
+<p>Each process is executed with limited privileges.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Processes are run in a chroot environment where feasible.</li>
+<li>Processes are executed as unprivileged users where feasible.</li>
+</ul>
+</div></blockquote>
+<p>Wazuh processes on Linux systems are controlled using the relevant tool (i.e. systemctl, service, initctl)</p>
+<p>C:\Program Files (x86)\ossec-agent\win32ui.exe  is the Windows management tool for controlling the Wazuh service on Windows agents.</p>
+
+
+
+<div class="slide-no">9</div>
+
+
+</article>
+<article class="slide level-2" id="network-communications">
+
+<h2>Network Communications</h2>
+
+<a class="custom-width reference internal image-reference" href="_images/network_communications.svg"><img alt="_images/network_communications.svg" class="custom-width" src="_images/network_communications.svg" width="900px"></a>
+<div class="line-block">
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+</div>
+<ul class="simple">
+<li>Agent-Manager connections are compressed and encrypted with per-agent pre-shared keys (AES) over tcp or udp 1514.</li>
+<li>Remoted can directly accept TCP and/or UDP port 514 messages from syslog-sending devices.</li>
+<li>For more robust centralized syslog collection, syslog server(s)can be used on agent(s) or manager.</li>
+</ul>
+
+
+
+<div class="slide-no">10</div>
+
+
+</article>
+<article class="slide level-2" id="wazuh-secure-communication">
+
+<h2>Wazuh Secure Communication</h2>
+
+<ul class="simple">
+<li>All Wazuh communications are authenticated and encrypted with AES or TLS.</li>
+<li>Wazuh manager worker nodes use AES to sync configuration and state data with the manager master node.</li>
+<li>Each Wazuh agent is assigned a unique key for reporting to the manager.</li>
+<li>Significant privilege separation and isolation is built into the solution.</li>
+</ul>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">It is still wise to limit access to the central components since:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>It centralizes priviledged security information of all monitored assets.</li>
+<li>It can trigger Active Responses or other remote commands if enabled.</li>
+</ul>
+</div></blockquote>
+</div>
+
+
+
+<div class="slide-no">11</div>
+
+
+</article>
+<article class="slide level-2" id="flood-protection">
+
+<h2>Flood Protection</h2>
+
+<a class="custom-width reference internal image-reference" href="_images/leaky_bucket.svg"><img alt="_images/leaky_bucket.svg" class="custom-width align-center" src="_images/leaky_bucket.svg" width="800px"></a>
+<div class="line-block">
+<div class="line"><br></div>
+</div>
+
+
+
+<div class="slide-no">12</div>
+
+
+</article>
+<article class="slide level-2" id="flood-scenario">
+
+<h2>Flood Scenario</h2>
+
+<a class="reference internal image-reference" href="_images/flood_scenario.png"><img alt="_images/flood_scenario.png" class="align-center" src="_images/flood_scenario.png" style="width: 700px;"></a>
+<ul class="simple">
+<li>Leaky bucket buffer flooding scenario with alerts and final recovery.</li>
+</ul>
+
+
+
+<div class="slide-no">13</div>
+
+
+</article>
+<article class="slide level-2" id="lab-exercise-set">
+
+<h2>Lab Exercise Set</h2>
+
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1A: Wazuh server Configuration</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Do some basic configuration of the Wazuh Manager and authenticate with and query the Wazuh API for the first time.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1B: Wazuh Web UI</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Briefly explore the Wazuh dashboard.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div class="slide-no">14</div>
+
+
+</article>
+<article class="slide level-1" id="agent-registration">
+
+<h1>Agent Registration</h1>
+
+
+
+
+<div class="slide-no">15</div>
+
+
+</article>
+<article class="slide level-2" id="authd-registration-service">
+
+<h2>Authd Registration Service</h2>
+
+<ul class="simple">
+<li>Agents must have a registration allocated in the Wazuh system before they can report in.</li>
+<li>Authd on any Wazuh manager answers agent requests for registration.</li>
+<li>This is unauthenticated by default but at least password protection is recommended.</li>
+<li>Certificate based self-registration authentication is also possible.</li>
+<li>Agents have multiple methods they can use to request a registration.</li>
+</ul>
+
+
+
+<div class="slide-no">16</div>
+
+
+</article>
+<article class="slide level-2" id="agent-initiating-registration">
+
+<h2>Agent Initiating Registration</h2>
+
+<ol class="arabic simple">
+<li>Agent auto-enrollment (default)</li>
+<li>Using agent-auth tool</li>
+<li>With agent installer via deployment variables</li>
+<li>Requesting registration directly from Wazuh API (rare)</li>
+</ol>
+
+
+
+<div class="slide-no">17</div>
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>Lab Exercise Set</h2>
+
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1C: Auto enrollment</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Register your linux-agent with your Wazuh manager using auto enrollment.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1D: Deployment Variables</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Install and register your windows-agent with deployment variables.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1E: Agent-auth tool</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Register your indexer agent with the agent-auth tool.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div class="slide-no">18</div>
+
+
+</article>
+<article class="slide level-1" id="remotely-upgrading-wazuh-agents">
+
+<h1>Remotely upgrading Wazuh Agents</h1>
+
+
+
+
+<div class="slide-no">19</div>
+
+
+</article>
+<article class="slide level-2" id="ways-to-remotely-upgrade-wazuh-agents">
+
+<h2>Ways to remotely upgrade Wazuh agents</h2>
+
+<p>Instead of manually upgrading Wazuh directly on agent systems, or using <code class="docutils literal notranslate"><span class="pre">yum/apt</span></code> repositories you can push Wazuh agent upgrades out from your Wazuh managers to connected agents, even to remote ones.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Wazuh API:</dt><dd><ul>
+<li>automatically routes upgrade tasks to the right managers</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>agent_upgrade (legacy):</dt><dd><ul>
+<li>a CLI tool to upgrade agent(s) in a single-manager setups</li>
+<li>not for use with Wazuh managed cloud, or manager clusters</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Web Interface</dt><dd><ul>
+<li>Through the <strong>API Console</strong> on the web interface users may interact with the API to initiate the agent upgrade</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+<div class="slide-no">20</div>
+
+
+</article>
+<article class="slide level-2" id="lab-exercise">
+
+<h2>Lab Exercise</h2>
+
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1F: Agent remote upgrade</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body"><p class="first">From the Wazuh Manager, push an upgrade to the outdated Wazuh Agent on the indexer system.</p>
+<p class="last">Do this with the Wazuh API both through the command line and the web interface’s <strong>API Console</strong>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div class="slide-no">21</div>
+
+
+</article>
+<article class="slide level-1" id="general-configuration">
+
+<h1>General Configuration</h1>
+
+
+
+
+<div class="slide-no">22</div>
+
+
+</article>
+<article class="slide level-2" id="ossec-conf">
+
+<h2>ossec.conf</h2>
+
+<ul class="simple">
+<li>primary configuration file on managers and agents</li>
+<li><dl class="first docutils">
+<dt>location</dt><dd><ul>
+<li>/var/ossec/etc/ossec.conf</li>
+<li>C:\Program Files (x86)\ossec-agent\ossec.conf</li>
+<li>/Library/Ossec/etc/ossec.conf</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>ossec.conf  controls the core components of Wazuh</dt><dd><ul>
+<li>log analysis</li>
+<li>file integrity monitoring (syscheck)</li>
+<li>rootkit detection</li>
+<li>active-response</li>
+<li>loads the decoders &amp; the rules.xml files</li>
+<li>controls the notification (e.g. e-mail)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+<div class="slide-no">23</div>
+
+
+</article>
+<article class="slide level-2" id="internal-options-conf">
+
+<h2>internal_options.conf</h2>
+
+<p>Low-level config file for managers and agents</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Location</dt><dd><ul class="simple">
+<li><dl class="first docutils">
+<dt>internal_options.conf</dt><dd><ul>
+<li>shows all options, but is overwritten by Wazuh upgrades</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>local_internal_options.conf</dt><dd><ul>
+<li>copy items from internal_options.conf here to customize</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">internal options are for:</p>
+<blockquote>
+<div><ul class="simple">
+<li>controlling debug level for specific daemons</li>
+</ul>
+<ul class="simple">
+<li>enabling/disabling grouping of email alerts</li>
+<li>enabling/disabling remote commands</li>
+<li>various other obscure settings generally best left alone</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Handle with care!</p>
+</li>
+</ul>
+
+
+
+<div class="slide-no">24</div>
+
+
+</article>
+<article class="slide level-2" id="agent-configuration">
+
+<h2>Agent Configuration</h2>
+
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Location</dt><dd><ul>
+<li>/var/ossec/etc/shared/*GROUP*/agent.conf</li>
+<li>Multiple possible *GROUP* locations, each servicing a different group of agents.  Agents can be in multiple groups</li>
+<li>Controlled by agent_groups command on the manager. Default group is called default</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Agents pull it from the Wazuh manager, quickly fetching new versions and automatically restarting to apply them.</li>
+<li>agent.conf should never be edited on the agent side as changes will quickly be overwritten with the manager’s version.</li>
+<li>Specific agent config sections are possible on a per-OS, per-profile, and per-agent basis, allowing great flexibility.</li>
+<li>Editable from the Web Interface</li>
+</ul>
+
+
+
+<div class="slide-no">25</div>
+
+
+</article>
+<article class="slide level-2" id="agent-groups-and-profiles">
+
+<h2>Agent groups and profiles</h2>
+
+<p>Important tools for organizing the different configuration setting you will need use on different groups/types of agents.</p>
+<blockquote>
+<div><ul class="simple">
+<li>agent groups</li>
+<li>configuration profiles</li>
+</ul>
+</div></blockquote>
+
+
+
+<div class="slide-no">26</div>
+
+
+</article>
+<article class="slide level-2" id="id3">
+
+<h2>Agent groups and profiles</h2>
+
+<p>In an agent’s ossec.conf, the &lt;config-profile&gt; line can include multiple profiles:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Example ossec.conf on agent</span></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">client</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">config</span><span class="o">-</span><span class="n">profile</span><span class="o">&gt;</span><span class="n">amzn</span><span class="p">,</span><span class="n">amzn2</span><span class="p">,</span><span class="n">indexer</span><span class="o">&lt;/</span><span class="n">config</span><span class="o">-</span><span class="n">profile</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">server</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="n">wazuh</span><span class="o">-</span><span class="n">manager</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">com</span><span class="o">&lt;/</span><span class="n">address</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">server</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">client</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Example agent.conf on manager (in sca agent group)</span></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">agent_config</span> <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;amzn&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">sca</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">policies</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">policy</span><span class="o">&gt;</span><span class="n">cis_amazon_linux_2</span><span class="o">.</span><span class="n">yml</span><span class="o">&lt;/</span><span class="n">policy</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">policies</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">sca</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">agent_config</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+
+<div class="slide-no">27</div>
+
+
+</article>
+<article class="slide level-2" id="agent-conf-large-example">
+
+<h2>Agent.conf large example</h2>
+
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">agent.conf (on manager)</span></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">agent_config</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">agent_config</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">agent_config</span> <span class="n">os</span><span class="o">=</span><span class="s2">&quot;Linux&quot;</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">agent_config</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">agent_config</span> <span class="n">os</span><span class="o">=</span><span class="s2">&quot;Windows&quot;</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">agent_config</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">agent_config</span> <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;indexer&quot;</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">agent_config</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">agent_config</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;linux-agentX5&quot;</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">agent_config</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+
+<div class="slide-no">28</div>
+
+
+</article>
+<article class="slide level-2" id="id4">
+
+<h2>Lab Exercise</h2>
+
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 1G - Centralized agent configuration</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Configure two agent groups, each with a multi-level agent.conf. Confirm agents are getting and using the config content relevant to them within their group.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div class="slide-no">29</div>
+
+
+</article>
+<article class="slide level-2" id="mass-deployment-discussion">
+
+<h2>Mass deployment discussion</h2>
+
+<blockquote>
+<div><ul class="simple">
+<li>Map out necessary agent groups</li>
+<li>If desired prepare a custom local agent configuration</li>
+<li>Additional software to be installed alongside Wazuh</li>
+<li>Supply custom configurations (SCA, Active Response, etc.)</li>
+<li>If remote commands are desired adjust internal configuration files</li>
+</ul>
+</div></blockquote>
+
+
+
+<div class="slide-no">30</div>
+
+
+</article>
+<article class="slide level-1" id="log-analysis">
+
+<h1>Log Analysis</h1>
+
+
+
+
+<div class="slide-no">31</div>
+
+
+</article>
+<article class="slide level-2" id="log-analysis-with-wazuh">
+
+<h2>Log Analysis with Wazuh</h2>
+
+<p>Wazuh’s log analysis engine is capable of:</p>
+<blockquote>
+<div><ul class="simple">
+<li>extracting important fields from a log message</li>
+<li>identifying &amp; evaluating the content of a log message</li>
+<li>categorizing it by matching specific rules</li>
+<li>and consequently generating an alert from it.</li>
+</ul>
+</div></blockquote>
+
+
+
+<div class="slide-no">32</div>
+
+
+</article>
+<article class="slide level-2" id="log-flow">
+
+<h2>Log Flow</h2>
+
+<a class="custom-width reference internal image-reference" href="_images/network_communications.svg"><img alt="_images/network_communications.svg" class="custom-width" src="_images/network_communications.svg" width="900px"></a>
+<div class="line-block">
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+<div class="line"><br></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>wazuh-logcollector on the agent collects the logs</li>
+<li>wazuh-analysisd on the manager analyzes the log entries</li>
+<li>wazuh-maild sends out alerts</li>
+<li>wazuh-execd used for Active Response</li>
+</ul>
+</div></blockquote>
+
+
+
+<div class="slide-no">33</div>
+
+
+</article>
+<article class="slide level-2" id="stages-of-log-analysis">
+
+<h2>Stages of Log Analysis</h2>
+
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Log collection on agents as defined in &lt;localfile&gt; sections</dt><dd><ul>
+<li>These define a &lt;log_format&gt; that informs pre-decoding.</li>
+<li>For json logs, these also can define one or more additional fields to mark the json logs to clearly indicate the log type or source, to inform rule-based analysis.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pre-decoding</dt><dd><ul>
+<li>Extracts basic fields based on &lt;log_format&gt; value of source, like program_name from from the syslog header</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Decoding</dt><dd><ul>
+<li>Extracts program-specific fields like srcip or username</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Rule-based analysis of decoded log</dt><dd><ul>
+<li>One more more instances and types of matching criteria can be against individual log fields or the whole log.</li>
+<li>Matching of field values against CDB lists also supported.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+
+
+
+<div class="slide-no">34</div>
+
+
+</article>
+<article class="slide level-2" id="example-localfile-sections">
+
+<h2>Example &lt;localfile&gt; sections</h2>
+
+<p>Collecting a file, a Windows EventChannel and a set of files by using a wildcard:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">localfile</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">log_format</span><span class="o">&gt;</span><span class="n">syslog</span><span class="o">&lt;/</span><span class="n">log_format</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">messages</span><span class="o">&lt;/</span><span class="n">location</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">localfile</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">localfile</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">log_format</span><span class="o">&gt;</span><span class="n">eventchannel</span><span class="o">&lt;/</span><span class="n">log_format</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span><span class="n">Application</span><span class="o">&lt;/</span><span class="n">location</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">localfile</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">localfile</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">log_format</span><span class="o">&gt;</span><span class="n">json</span><span class="o">&lt;/</span><span class="n">log_format</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">suricata</span><span class="o">/</span><span class="n">eve</span><span class="o">-*.</span><span class="n">json</span><span class="o">&lt;/</span><span class="n">location</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">label</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;@source&quot;</span><span class="o">&gt;</span><span class="n">suricata</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">localfile</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">35</div>
+
+
+</article>
+<article class="slide level-2" id="command-type-localfile-sections">
+
+<h2>Command type &lt;localfile&gt; sections</h2>
+
+<p>Configuration to collect the output of a command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">localfile</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">log_format</span><span class="o">&gt;</span><span class="n">full_command</span><span class="o">&lt;/</span><span class="n">log_format</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span><span class="n">netstat</span> <span class="o">-</span><span class="n">natp</span> <span class="o">|</span> <span class="n">grep</span> <span class="s1">&#39;^tcp .*LISTEN &#39;</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">|</span> <span class="n">sed</span> <span class="s1">&#39;s/LISTEN \+[0-9]\+\///g&#39;</span>
+   <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="s2">&quot;127.0.0.1:&quot;</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $4&quot;</span><span class="se">\t</span><span class="s1">&quot;$6}&#39;</span><span class="o">&lt;/</span><span class="n">command</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">frequency</span><span class="o">&gt;</span><span class="mi">300</span><span class="o">&lt;/</span><span class="n">frequency</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">alias</span><span class="o">&gt;</span><span class="n">netstat</span> <span class="n">listening</span> <span class="n">ports</span><span class="o">&lt;/</span><span class="n">alias</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">localfile</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">rule</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;533&quot;</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;7&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">if_sid</span><span class="o">&gt;</span><span class="mi">530</span><span class="o">&lt;/</span><span class="n">if_sid</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">match</span><span class="o">&gt;</span><span class="n">ossec</span><span class="p">:</span> <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;netstat listening ports&lt;/match&gt;</span>
+  <span class="o">&lt;</span><span class="n">check_diff</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">Listened</span> <span class="n">ports</span> <span class="n">status</span> <span class="p">(</span><span class="n">netstat</span><span class="p">)</span> <span class="n">changed</span> <span class="p">(</span><span class="n">new</span> <span class="n">port</span> <span class="n">opened</span> <span class="ow">or</span> <span class="n">closed</span><span class="p">)</span><span class="o">.</span>
+  <span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">group</span><span class="o">&gt;</span><span class="n">pci_dss_10</span><span class="mf">.2.7</span><span class="p">,</span><span class="n">pci_dss_10</span><span class="mf">.6.1</span><span class="p">,</span><span class="n">gpg13_10</span><span class="mf">.1</span><span class="p">,</span><span class="n">gdpr_IV_35</span><span class="mf">.7</span><span class="o">.</span><span class="n">d</span><span class="p">,</span><span class="n">hipaa_164</span><span class="mf">.312</span><span class="o">.</span><span class="n">b</span><span class="p">,</span>
+  <span class="n">nist_800_53_AU</span><span class="mf">.14</span><span class="p">,</span><span class="n">nist_800_53_AU</span><span class="mf">.6</span><span class="p">,</span><span class="n">tsc_CC6</span><span class="mf">.8</span><span class="p">,</span><span class="n">tsc_CC7</span><span class="mf">.2</span><span class="p">,</span><span class="n">tsc_CC7</span><span class="mf">.3</span><span class="p">,</span><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">rule</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">36</div>
+
+
+</article>
+<article class="slide level-2" id="various-log-samples">
+
+<h2>Various log samples</h2>
+
+<p>pam / squid / apache log samples</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2016</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">15</span><span class="n">T15</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mf">10.078830</span><span class="o">+</span><span class="mi">01</span><span class="p">:</span><span class="mi">00</span> <span class="n">tron</span> <span class="n">su</span><span class="p">:</span><span class="n">pam_unix</span><span class="p">(</span><span class="n">su</span><span class="o">-</span><span class="n">l</span><span class="p">:</span><span class="n">auth</span><span class="p">)</span>
+<span class="p">:</span><span class="n">authentication</span>  <span class="n">failure</span><span class="p">;</span><span class="n">logname</span><span class="o">=</span><span class="n">tm</span> <span class="n">uid</span><span class="o">=</span><span class="mi">500</span> <span class="n">euid</span><span class="o">=</span><span class="mi">0</span> <span class="n">tty</span><span class="o">=</span><span class="n">pts</span><span class="o">/</span><span class="mi">0</span>
+<span class="n">ruser</span><span class="o">=</span><span class="n">tm</span> <span class="n">rhost</span><span class="o">=</span> <span class="n">user</span><span class="o">=</span><span class="n">root</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1265939281.764</span> <span class="mi">1</span> <span class="mf">172.16.167.228</span> <span class="n">TCP_DENIED</span><span class="o">/</span><span class="mi">403</span> <span class="mi">734</span> <span class="n">POST</span>
+<span class="s2">&quot;http://lbcore1.metacafe.com/test/SystemInfoManager.php&quot;</span>
+<span class="o">-</span> <span class="n">NONE</span><span class="o">/-</span> <span class="n">text</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Sun</span> <span class="n">Mar</span> <span class="mi">06</span> <span class="mi">08</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mi">16</span> <span class="mi">2016</span><span class="p">]</span> <span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="p">[</span><span class="n">client</span> <span class="mf">187.172.181.57</span><span class="p">]</span>
+<span class="n">Invalid</span> <span class="n">URI</span> <span class="ow">in</span> <span class="n">request</span> <span class="n">GET</span><span class="p">:</span> <span class="n">index</span><span class="o">.</span><span class="n">php</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+
+
+<div class="slide-no">37</div>
+
+
+</article>
+<article class="slide level-2" id="example-1-2">
+
+<h2>Example 1/2</h2>
+
+<p>Log:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dec</span>  <span class="mi">5</span> <span class="mi">00</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">49</span> <span class="n">manager6</span> <span class="n">sshd</span><span class="p">[</span><span class="mi">25467</span><span class="p">]:</span> <span class="n">Failed</span> <span class="n">password</span> <span class="k">for</span> <span class="n">root</span> <span class="kn">from</span>
+<span class="mf">113.195.145.13</span> <span class="n">port</span> <span class="mi">19044</span> <span class="n">ssh2</span>
+</pre></div>
+</div>
+<p>Pre-decoding :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hostname</span><span class="p">:</span> <span class="n">manager6</span>
+<span class="n">program_name</span><span class="p">:</span> <span class="n">sshd</span>
+<span class="n">log</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">password</span> <span class="k">for</span> <span class="n">root</span> <span class="kn">from</span> <span class="mf">113.195.145.13</span> <span class="n">port</span> <span class="mi">19044</span> <span class="n">ssh2</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">38</div>
+
+
+</article>
+<article class="slide level-2" id="example-2-2">
+
+<h2>Example 2/2</h2>
+
+<p>Log:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dec</span>  <span class="mi">5</span> <span class="mi">00</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">49</span> <span class="n">manager6</span> <span class="n">sshd</span><span class="p">[</span><span class="mi">25467</span><span class="p">]:</span> <span class="n">Failed</span> <span class="n">password</span> <span class="k">for</span> <span class="n">root</span> <span class="kn">from</span>
+<span class="mf">113.195.145.13</span> <span class="n">port</span> <span class="mi">19044</span> <span class="n">ssh2</span>
+</pre></div>
+</div>
+<p>Decoding :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">decoder</span><span class="p">:</span> <span class="n">sshd</span>
+<span class="n">dstuser</span><span class="p">:</span> <span class="n">root</span>
+<span class="n">srcip</span><span class="p">:</span> <span class="mf">113.195.145.13</span>
+<span class="n">srcport</span><span class="p">:</span> <span class="mi">19044</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">39</div>
+
+
+</article>
+<article class="slide level-2" id="logging-alerts-to-alerts-json">
+
+<h2>Logging alerts to alerts.json</h2>
+
+<ul class="simple">
+<li>When &lt;jsonout_output&gt; is enabled in the manager’s ossec.conf, alerts are recorded as JSON records in alerts.json.  These are normally shipped by Filebeat to the Wazuh indexer or on alternate installations to Elasticsearch or by Splunk Universal Forwarder to Splunk.</li>
+<li>/var/ossec/logs/alerts/alerts.json:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{&quot;timestamp&quot;:&quot;2020-12-07T21:44:37.313+0000&quot;,&quot;rule&quot;:{&quot;level&quot;:5,
+&quot;description&quot;:&quot;sshd: Reverse lookup error (bad ISP or attack).
+&quot;,&quot;id&quot;:&quot;5702&quot;,&quot;firedtimes&quot;:58,&quot;mail&quot;:false,&quot;groups&quot;:[&quot;syslog&quot;
+,&quot;sshd&quot;],&quot;pci_dss&quot;:[&quot;11.4&quot;],&quot;gpg13&quot;:[&quot;4.12&quot;],&quot;gdpr&quot;:
+[&quot;IV_35.7.d&quot;],&quot;nist_800_53&quot;:[&quot;SI.4&quot;],&quot;tsc&quot;:[&quot;CC6.1&quot;,&quot;CC6.8&quot;,
+&quot;CC7.2&quot;,&quot;CC7.3&quot;]},&quot;agent&quot;:{&quot;id&quot;:&quot;000&quot;,&quot;name&quot;:&quot;manager1&quot;},
+&quot;manager&quot;:{&quot;name&quot;:&quot;manager1&quot;},&quot;id&quot;:&quot;1607377477.3731351&quot;,
+&quot;cluster&quot;:{&quot;name&quot;:&quot;wazuh&quot;,&quot;node&quot;:&quot;master&quot;},&quot;full_log&quot;:&quot;Dec
+7 21:44:37 ip-10-0-1-1 sshd[22566]: reverse mapping checking
+getaddrinfo for 190.202.147.253.estatic.cantv.net [190.202.147.253]
+failed - POSSIBLE BREAK-IN ATTEMPT!&quot;,&quot;predecoder&quot;:
+{&quot;program_name&quot;:&quot;sshd&quot;,&quot;timestamp&quot;:&quot;Dec  7 21:44:37&quot;,&quot;hostname&quot;
+:&quot;ip-10-0-1-1&quot;},&quot;decoder&quot;:{&quot;parent&quot;:&quot;sshd&quot;,&quot;name&quot;:&quot;sshd&quot;},&quot;data&quot;
+:{&quot;srcip&quot;:&quot;190.202.147.253&quot;},&quot;location&quot;:&quot;/var/log/secure&quot;}
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">40</div>
+
+
+</article>
+<article class="slide level-2" id="logging-alerts-events-to-archives-json">
+
+<h2>Logging alerts/events to archives.json</h2>
+
+<ul class="simple">
+<li>Alternatively, when &lt;logall_json&gt; is enabled, all events are logged to archives.json whether or not they match a rule.</li>
+<li>/var/ossec/logs/archives/archives.json</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;timestamp&quot;</span><span class="p">:</span><span class="s2">&quot;2017-12-05T02:51:36+0000&quot;</span><span class="p">,</span><span class="s2">&quot;rule&quot;</span><span class="p">:{},</span><span class="s2">&quot;agent&quot;</span><span class="p">:{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;000&quot;</span>
+<span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;manager6&quot;</span><span class="p">},</span><span class="s2">&quot;manager&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;manager6&quot;</span><span class="p">},</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1512442296.</span>
+<span class="mi">149532</span><span class="s2">&quot;,&quot;</span><span class="n">full_log</span><span class="s2">&quot;:&quot;</span><span class="n">Dec</span>  <span class="mi">5</span> <span class="mi">02</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">35</span> <span class="n">manager6</span> <span class="n">sshd</span><span class="p">[</span><span class="mi">382</span><span class="p">]:</span> <span class="n">Disconnected</span>
+<span class="kn">from</span> <span class="mf">113.195.145.13</span> <span class="n">port</span> <span class="mi">48727</span> <span class="p">[</span><span class="n">preauth</span><span class="p">]</span><span class="s2">&quot;,&quot;</span><span class="n">predecoder</span><span class="s2">&quot;:{&quot;</span><span class="n">program_name</span><span class="s2">&quot;</span>
+<span class="p">:</span><span class="n">sshd</span><span class="s2">&quot;,&quot;</span><span class="n">hostname</span><span class="s2">&quot;:&quot;</span><span class="n">manager6</span><span class="s2">&quot;},&quot;</span><span class="n">decoder</span><span class="s2">&quot;:{&quot;</span><span class="n">name</span><span class="s2">&quot;:&quot;</span><span class="n">sshd</span><span class="s2">&quot;},&quot;</span><span class="n">location</span><span class="s2">&quot;:</span>
+<span class="s2">&quot;/var/log/secure&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">41</div>
+
+
+</article>
+<article class="slide level-2" id="log-retention-considerations">
+
+<h2>Log retention considerations</h2>
+
+<p>Considerations regarding alerts.json and archives.json</p>
+<blockquote>
+<div><ul class="simple">
+<li>These files are rotated and compressed daily by default.</li>
+<li>They accumulate indefinitely unless you add a process to delete old files.</li>
+<li>Sample cron one-liner to daily remove 7+ day old rotated files:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">2</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">root</span> <span class="n">find</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">ossec</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="p">{</span><span class="n">alerts</span><span class="p">,</span><span class="n">archives</span><span class="p">}</span> <span class="o">-</span><span class="n">mtime</span> <span class="o">+</span><span class="mi">7</span> <span class="o">-</span><span class="n">exec</span> <span class="n">rm</span> <span class="p">{}</span> \<span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>The archives.json file contains both alerts and non alerting events.</li>
+<li>To split the routing of archives.json across multiple index patterns, the Wazuh Filebeat module must be customized.</li>
+<li>Rotated files can be used to reinject one or more past day’s worth of alerts.json or archives.json files back to the Wazuh indexer. See: <a class="reference external" href="https://wazuh.com/blog/recover-your-data-using-wazuh-alert-backups/">https://wazuh.com/blog/recover-your-data-using-wazuh-alert-backups/</a></li>
+</ul>
+</div></blockquote>
+
+
+
+<div class="slide-no">42</div>
+
+
+</article>
+<article class="slide level-2" id="log-analysis-and-regulatory-compliance">
+
+<h2>Log Analysis and Regulatory Compliance</h2>
+
+<blockquote>
+<div><ul class="simple">
+<li>Computer-aided log analysis is a <strong>powerful tool</strong> for identifying threats or potential problems within a vast stream of collected log events.</li>
+<li><dl class="first docutils">
+<dt>Many regulatory compliance requirements call for regular review of security logs.</dt><dd><ul>
+<li>This is generally not feasible nor sustainable without the aid of machine analysis and categorization.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>It can also help classify which events need to be stored in order to comply with regulatory requirements.</dt><dd><ul>
+<li>This translates to reduced storage costs.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+
+
+
+<div class="slide-no">43</div>
+
+
+</article>
+<article class="slide level-2" id="why-analyze-logs">
+
+<h2>Why analyze logs?</h2>
+
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/PCI.png"><img alt="_images/PCI.png" src="_images/PCI.png" style="height: 100px;"></a>
+</td>
+<td><a class="first last reference internal image-reference" href="_images/GDPR.png"><img alt="_images/GDPR.png" src="_images/GDPR.png" style="height: 150px;"></a>
+</td>
+<td><a class="first last reference internal image-reference" href="_images/NIST.png"><img alt="_images/NIST.png" src="_images/NIST.png" style="height: 80px;"></a>
+</td>
+</tr>
+<tr class="row-even"><td><a class="first last reference internal image-reference" href="_images/SOX.png"><img alt="_images/SOX.png" src="_images/SOX.png" style="height: 150px;"></a>
+</td>
+<td><a class="first last reference internal image-reference" href="_images/SOC2.png"><img alt="_images/SOC2.png" src="_images/SOC2.png" style="height: 150px;"></a>
+</td>
+<td><a class="first last reference internal image-reference" href="_images/HIPAA.png"><img alt="_images/HIPAA.png" src="_images/HIPAA.png" style="height: 150px;"></a>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="first last reference internal image-reference" href="_images/FIS.png"><img alt="_images/FIS.png" src="_images/FIS.png" style="height: 150px;"></a>
+</td>
+<td><a class="first last reference internal image-reference" href="_images/ISO.svg"><img alt="_images/ISO.svg" height="150px" src="_images/ISO.svg"></a>
+</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">44</div>
+
+
+</article>
+<article class="slide level-2" id="compliance-mapping-in-wazuh-rules">
+
+<h2>Compliance mapping in Wazuh rules</h2>
+
+<ul class="simple">
+<li>The ruleset maintained by Wazuh contains mappings to specific compliance requirements.</li>
+<li><dl class="first docutils">
+<dt>A list of all related Wazuh rules can be found here:</dt><dd><ul>
+<li><a class="reference external" href="../resources/Wazuh_PCI_DSS_Guide.pdf">https://wazuh.com/resources/Wazuh_PCI_DSS_Guide.pdf</a></li>
+<li><a class="reference external" href="../resources/Wazuh_GDPR_White_Paper.pdf">https://wazuh.com/resources/Wazuh_GDPR_White_Paper.pdf</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>PCI-tagged Wazuh rule :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">rule</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;5402&quot;</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;3&quot;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">if_sid</span><span class="o">&gt;</span><span class="mi">5400</span><span class="o">&lt;/</span><span class="n">if_sid</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">regex</span><span class="o">&gt;</span> <span class="p">;</span> <span class="n">USER</span><span class="o">=</span><span class="n">root</span> <span class="p">;</span> <span class="n">COMMAND</span><span class="o">=|</span> <span class="p">;</span> <span class="n">USER</span><span class="o">=</span><span class="n">root</span> <span class="p">;</span> <span class="n">TSID</span><span class="o">=</span>\<span class="n">S</span><span class="o">+</span> <span class="p">;</span> <span class="n">COMMAND</span><span class="o">=&lt;/</span><span class="n">regex</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">Successful</span> <span class="n">sudo</span> <span class="n">to</span> <span class="n">ROOT</span> <span class="n">executed</span><span class="o">.&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">group</span><span class="o">&gt;</span><span class="n">pci_dss_10</span><span class="mf">.2.5</span><span class="p">,</span><span class="n">pci_dss_10</span><span class="mf">.2.2</span><span class="p">,</span><span class="n">gpg13_7</span><span class="mf">.6</span><span class="p">,</span><span class="n">gpg13_7</span><span class="mf">.8</span><span class="p">,</span><span class="n">gpg13_7</span><span class="mf">.13</span><span class="p">,</span>
+ <span class="n">gdpr_IV_32</span><span class="mf">.2</span><span class="p">,</span><span class="n">hipaa_164</span><span class="mf">.312</span><span class="o">.</span><span class="n">b</span><span class="p">,</span><span class="n">nist_800_53_AU</span><span class="mf">.14</span><span class="p">,</span><span class="n">nist_800_53_AC</span><span class="mf">.7</span>
+ <span class="n">nist_800_53_AC</span><span class="mf">.6</span><span class="p">,</span><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">rule</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">45</div>
+
+
+</article>
+<article class="slide level-2" id="id5">
+
+<h2>Lab Exercise Set</h2>
+
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 2A: Generate a brute-force attack</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Repeatedly attempt to use  a wrong password with an agent.  Monitor the alerts.log, watching for the generation of the brute-force alert.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 2B: Log Analysis</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Analyze the log entries resulting from the previous exercise. What is shown and what does it mean? How can you distinguish an attack from a harmless log event?</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-definition admonition">
+<p class="first admonition-title">Lab Exercise 2C: Looking up rules</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Lab Objective:</th><td class="field-body">Looking up and tracing Wazuh rules for better understanding of alerts.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div class="slide-no">46</div>
+
+
+</article>
+<article class="slide level-2" id="wazuh-indexer-dashboard-and-filebeat">
+
+<h2>Wazuh indexer, dashboard and Filebeat</h2>
+
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="20%">
+<col width="80%">
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure align-default">
+<img alt="_images/Indexer.svg" src="_images/Indexer.svg"></div>
+</td>
+<td><dl class="first last docutils">
+<dt>The Wazuh indexer is a highly scalable full-text search and analytics engine, that receives data shipped by Filebeat, indexes it and allows the Wazuh dashboard</dt><dd>access as its primary data source. It is a version of OpenSearch built and maintained by the Wazuh team.</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure align-default">
+<img alt="_images/Dashboard.svg" src="_images/Dashboard.svg"></div>
+</td>
+<td>The Wazuh dashboard is the web front-end to the data in the Wazuh indexer. This customized package forked from OpenSearch dashboards
+includes the Wazuh plugin which on top of solution specific dashboards interacts with the Wazuh API to provide visibility and control over the solution’s configuration and status.</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure align-default">
+<img alt="_images/beats.png" src="_images/beats.png">
+</div>
+</td>
+<td>Beats is a family of data shippers. Using Filebeat specifically, Wazuh’s alerts.json or archives.json data can be sent to the Wazuh indexer.
+It also can do data transformation and enrichment, like parsing strings, normalizing field names, and doing geoip lookups.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">47</div>
+
+
+</article>
+<article class="slide level-2" id="id6">
+
+<h2>Wazuh indexer, dashboard and Filebeat</h2>
+
+<a class="custom-width reference internal image-reference" href="_images/indexer_integration.svg"><img alt="_images/indexer_integration.svg" class="custom-width" src="_images/indexer_integration.svg" width="900px"></a>
+
+
+
+<div class="slide-no">48</div>
+
+
+</article>
+<article class="slide level-1" id="indexer-and-dashboards-integration-demo">
+
+<h1>Indexer and dashboards integration demo</h1>
+
+
+
+
+<div class="slide-no">49</div>
+
+
+</article>
+<article class="slide level-2" id="considerations-for-the-wazuh-indexer">
+
+<h2>Considerations for the Wazuh indexer</h2>
+
+<p>Considerations regarding the Wazuh indexer</p>
+<ul class="simple">
+<li>ILM for live indices and snapshots: <a class="reference external" href="https://wazuh.com/blog/index-backup-management/">Blog</a></li>
+<li>Monitoring health of Wazuh indexer cluster</li>
+<li>Management of shards and replicas</li>
+<li>Index rollover periods</li>
+<li>Access restrictions for the Wazuh indices and for the Wazuh dashboard</li>
+<li>Split routing of alerts across different index patterns</li>
+<li>Data enrichment</li>
+<li>Field normalization</li>
+<li>Field data types like number and ip</li>
+<li>Analysis of at least samples of non-alert Wazuh events</li>
+</ul>
+
+
+
+<div class="slide-no">50</div>
+
+
+</article>
+<article class="slide level-1" id="questions">
+
+<h1>Questions</h1>
+
+
+
+
+<div class="slide-no">51</div>
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
