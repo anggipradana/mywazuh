@@ -1,0 +1,12 @@
+﻿@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(s/firamono/v14/N0bX2SlFPv1weGeLZDtgJv7X.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url(s/firamono/v14/N0bS2SlFPv1weGeLZDto1d3HnvfR.ttf) format('truetype');
+}
